@@ -1,0 +1,9 @@
+.accordion-handdle {
+  background-color: #999999;
+}
+
+.accordion-body {
+  &[aria-disabled="true"] {
+    display: none;
+  }
+}
