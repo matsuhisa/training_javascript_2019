@@ -1,5 +1,11 @@
 {
   "devDependencies": {
-    "webpack": "^4.35.3"
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  },
+  "scripts": {
+    "develop": "webpack --config ./webpack.config.js --watch -d --progress --colors",
+    "build": "webpack --config ./webpack.config.js --bail -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

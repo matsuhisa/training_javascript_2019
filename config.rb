@@ -44,3 +44,18 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+# activate :external_pipeline,
+#   name: :webpack,
+#   command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
+#   source: ".tmp/dist",
+#   latency: 1
+
+activate :external_pipeline, {
+  name: :webpack,
+  command: build? ?
+    "NODE_ENV=production npm run build" :
+    "NODE_ENV=develop npm run develop",
+  source: "./build",
+  latency: 1
+}
