@@ -1,1 +1,3 @@
-# Training_Javascript_2019
+# Training JavaScript 2019
+
+# 準備
