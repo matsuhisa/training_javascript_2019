@@ -1,8 +1,8 @@
-= javascript_include_tag "answers/ui/accordion"
-
 %h1 アコーディオン
 
-.accordion
+%p Stimulus.js を利用した場合
+
+.accordion{ data: { controller: "hello" } }
   .accordion-handdle{ data: { target: 1 } }
     タイトル
   .accordion-body{ data: { target: 1 }, "aria-disabled": "true" }
