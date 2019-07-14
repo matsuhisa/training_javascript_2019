@@ -1,7 +1,9 @@
 {
   "devDependencies": {
+    "@babel/core": "^7.5.4",
     "@babel/plugin-proposal-class-properties": "^7.5.0",
     "@stimulus/polyfills": "^1.1.1",
+    "babel-loader": "^8.0.6",
     "stimulus": "^1.1.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
