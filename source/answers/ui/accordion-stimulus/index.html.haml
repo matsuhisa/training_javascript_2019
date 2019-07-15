@@ -2,13 +2,9 @@
 
 %p Stimulus.js を利用した場合
 
-.accordion{ data: { controller: "hello" } }
-  .accordion-handdle{ data: { target: 1 } }
+.accordion{ data: { controller: "accordion" } }
+  .accordion-handdle{ data: { target: "accordion.handle", action: "click->accordion#toggle" } }
     タイトル
-  .accordion-body{ data: { target: 1 }, "aria-disabled": "true" }
+  .accordion-body{ data: { target: "accordion.body" }, "aria-disabled": "true" }
     あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
 
-  .accordion-handdle{ data: { target: 2 } }
-    タイトル
-  .accordion-body{ data: { target: 2 }, "aria-disabled": "true" }
-    あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。
