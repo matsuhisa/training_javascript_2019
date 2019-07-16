@@ -1,34 +1,33 @@
 %h1 ダイアログ
 
-
-.dialog-background{ "aria-disabled": "true" }
-  .dialog{ "aria-disabled": "true" }
-    .dialog__title
-      .dialog__title-main 追加先
-      .dialog__close-aciton X
-    .dialog__albums
-      .dialog__album
-        .dialog__album-thumbnail
-          %img{ src: "#", width: "50", height: "50" }
-        .dialog__album-title 2019年猫研修
-      .dialog__album
-        .dialog__album-thumbnail
-          %img{ src: "#", width: "50", height: "50" }
-        .dialog__album-title 2018年ネコ研修
-      .dialog__album
-        .dialog__album-thumbnail
-          %img{ src: "#", width: "50", height: "50" }
-        .dialog__album-title 2017年ねこ研修
-
-.photos
+.photos{ data: { controller: "dialog" } }
   - 10.times do
-    .photo
+    .photo{ data: { action: "click->dialog#toggle" } }
       %img{ src: "/images/cat-1.jpg", width: "125", height: "125" }
-    .photo
+    .photo{ data: { action: "click->dialog#toggle" } }
       %img{ src: "/images/cat-2.jpg", width: "125", height: "125" }
-    .photo
+    .photo{ data: { action: "click->dialog#toggle" } }
       %img{ src: "/images/cat-3.jpg", width: "125", height: "125" }
-    .photo
+    .photo{ data: { action: "click->dialog#toggle" } }
       %img{ src: "/images/cat-4.jpg", width: "125", height: "125" }
-    .photo
+    .photo{ data: { action: "click->dialog#toggle" } }
       %img{ src: "/images/cat-5.jpg", width: "125", height: "125" }
+
+  .dialog-background{ data: { target: "dialog.background", action: "click->dialog#toggle" }, "aria-disabled": "true" }
+    .dialog{ data: { target: "dialog.body" }, "aria-disabled": "true" }
+      .dialog__title
+        .dialog__title-main 追加先
+        .dialog__close-aciton{ data: { action: "click->dialog#toggle" } } X
+      .dialog__albums
+        .dialog__album
+          .dialog__album-thumbnail
+            %img{ src: "#", width: "50", height: "50" }
+          .dialog__album-title 2019年猫研修
+        .dialog__album
+          .dialog__album-thumbnail
+            %img{ src: "#", width: "50", height: "50" }
+          .dialog__album-title 2018年ネコ研修
+        .dialog__album
+          .dialog__album-thumbnail
+            %img{ src: "#", width: "50", height: "50" }
+          .dialog__album-title 2017年ねこ研修
