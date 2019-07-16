@@ -9,7 +9,7 @@
 }
 
 .dialog-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, .6);
@@ -30,7 +30,7 @@
   background-color: #ffffff;
   border-radius: 4px;
   box-sizing: border-box;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24);
   padding: 10px;
   min-width: 300px;
 
@@ -52,14 +52,19 @@
   }
 
   .dialog__close-aciton {
+    cursor: pointer;
   }
 
   .dialog__albums {
   }
 
   .dialog__album {
+    cursor: pointer;
     display: flex;
-    // align-items: center;
+
+    &:hover {
+      background-color: #eeeeee;
+    }
   }
 
   .dialog__album-thumbnail {
@@ -81,4 +86,5 @@
   height: 125px;
   border: 1px solid #ac8c4b;
   margin: 0 10px 10px 0;
+  cursor: pointer;
 }

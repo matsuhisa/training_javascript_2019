@@ -3,7 +3,7 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "background", "body" ]
 
-  toggle() {
+  toggle(event) {
     const background = this.backgroundTarget
     const body = this.bodyTarget
 
@@ -14,5 +14,6 @@ export default class extends Controller {
       body.setAttribute('aria-disabled', true)
       background.setAttribute('aria-disabled', true)
     }
+    event.stopImmediatePropagation()
   }
 }
