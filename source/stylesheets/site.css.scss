@@ -7,3 +7,78 @@
     display: none;
   }
 }
+
+.dialog-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .6);
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &[aria-disabled="true"] {
+    display: none;
+  }
+}
+
+.dialog {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 10px;
+  min-width: 300px;
+
+  &[aria-disabled="true"] {
+    display: none;
+  }
+
+  .dialog__title {
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999999;
+    cursor: pointer;
+  }
+
+  .dialog__title-main {
+    font-weight: bold;
+  }
+
+  .dialog__close-aciton {
+  }
+
+  .dialog__albums {
+  }
+
+  .dialog__album {
+    display: flex;
+    // align-items: center;
+  }
+
+  .dialog__album-thumbnail {
+    padding-right: 10px;
+  }
+
+  .dialog__album-title {
+    color: #666666;
+  }
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: 125px;
+  height: 125px;
+  border: 1px solid #ac8c4b;
+  margin: 0 10px 10px 0;
+}
