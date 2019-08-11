@@ -1,12 +1,6 @@
-.accordion-handdle {
-  background-color: #999999;
-}
-
-.accordion-body {
-  &[aria-disabled="true"] {
-    display: none;
-  }
-}
+@import "accordion/accordion";
+@import "accordion/accordion-body";
+@import "accordion/accordion-handdle";
 
 .dialog-background {
   position: fixed;
