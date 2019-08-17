@@ -1,13 +1,4 @@
 export default class Github {
-
-  bar(userName) {
-    return userName
-  }
-
-  async fetchUser(userName) {
-    return userName
-  }
-
   // async fetchUser(userName) {
   //   // if(userName === "" ){
   //   //   const response = await fetch(`https://api.github.com/users/${userName}`)
