@@ -11,6 +11,7 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.4;
+  background-color: #f9f7f2;
   color: #3b4b5b;
 }
 
@@ -26,6 +27,11 @@ a:visited {
 }
 
 .contents {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.footer {
   padding: 10px;
 }
 
