@@ -1,0 +1,10 @@
+.github-user {
+  border: 1px solid #cab68c;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 6px 7px 0 rgba(59, 75, 91, .2);
+
+  & + & {
+    margin-top: 3em;
+  }
+}

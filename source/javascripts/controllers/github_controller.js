@@ -11,16 +11,27 @@ export default class extends Controller {
     // console.log(github.fetchUser(userName))
 
     fetch(`https://api.github.com/users/${userName}`)
+    .then(this.errorHandler)
     .then(response => {
-      console.log(response.status)
-      response.json().then(userInfo => {
-        const view = `
+      response.json()
+        .then(userInfo => {
+          const view = `
+<div class="github-user">
 <h2>${userInfo.name}</h2>
 <img src="${userInfo.avatar_url}" width="100">
+</div>
 `
-        this.userTarget.insertAdjacentHTML('afterbegin', view)
-        console.log(userInfo)
-      });
-    });
+          this.userTarget.insertAdjacentHTML('afterbegin', view)
+      })
+    })
+    .catch(error => { console.log(error) })
+  }
+
+  errorHandler(response) {
+    if(response.ok) {
+      return response
+    }else {
+      throw Error(response.statusText)
+    }
   }
 }
