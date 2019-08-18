@@ -1,16 +1,11 @@
 export default class Github {
-  // async fetchUser(userName) {
-  //   // if(userName === "" ){
-  //   //   const response = await fetch(`https://api.github.com/users/${userName}`)
-  //   //   console.log(response)
-  //   //   if(response.status == 200) {
-  //   //     const json = await response.json()
-  //   //     return json
-  //   //   }else{
-  //   //     reject(new Error("NOT FOUND"))
-  //   //   }
-  //   // }else{
-  //   //   reject(new Error("no user name"))
-  //   // }
-  // }
+
+  async fetchUser(userName) {
+    const response = await fetch(`https://api.github.com/users/${userName}`)
+    if(response.status == 200) {
+      return await response.json()
+    }else{
+      throw Error(response.statusText)
+    }
+  }
 }
