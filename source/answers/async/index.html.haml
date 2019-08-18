@@ -1,9 +1,9 @@
 %h1 github API を利用する
 
 %div{ data: { controller: "github" } }
-  .astync-action
+  .github-form
     %input{ type: "text", name: "username", data: { target: "github.username" } }
     %button{ type: "button", data: { action: "click->github#getUser" } } 送信
 
-  .astync-action-result
+  .github-async-result
     %div{ data: { target: "github.user" } } 
