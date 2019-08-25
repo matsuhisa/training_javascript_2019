@@ -8,6 +8,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
+    "jest-fetch-mock": "^2.1.2",
     "mkdirp": "^0.5.1",
     "node-fetch": "^2.6.0",
     "request": "^2.88.0",
@@ -22,5 +23,11 @@
     "develop": "webpack --config ./webpack.config.js --watch -d --progress --colors",
     "build": "webpack --config ./webpack.config.js --bail -p",
     "test": "jest"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ]
   }
 }
