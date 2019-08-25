@@ -1,4 +1,4 @@
-const coin = require('../../source/javascripts/for_test_sample/coin')
+const coin = require('../../../source/javascripts/for_test_sample/coin')
 
 describe('coin', () => {
   describe('return する方法', () =>{

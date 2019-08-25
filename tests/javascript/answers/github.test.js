@@ -1,4 +1,4 @@
-import Github from '../../source/javascripts/lib/github'
+import Github from '../../../source/javascripts/lib/github'
 
 
 describe('Github', ()=>{

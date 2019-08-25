@@ -1,4 +1,4 @@
-const add = require('../../source/javascripts/for_test_sample/add')
+const add = require('../../../source/javascripts/for_test_sample/add')
 
 describe('test funciton add', () => {
   it('1 + 2 = 3', done => {
