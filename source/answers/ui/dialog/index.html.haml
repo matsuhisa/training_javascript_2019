@@ -1,23 +1,23 @@
 %h1 ダイアログ
 
-.photos{ data: { controller: "dialog" } }
+.photos{ data: { controller: "answers--dialog" } }
   - 10.times do
-    .photo{ data: { action: "click->dialog#toggle" } }
+    .photo{ data: { action: "click->answers--dialog#toggle" } }
       %img{ src: "/images/cat-1.jpg", width: "125", height: "125" }
-    .photo{ data: { action: "click->dialog#toggle" } }
+    .photo{ data: { action: "click->answers--dialog#toggle" } }
       %img{ src: "/images/cat-2.jpg", width: "125", height: "125" }
-    .photo{ data: { action: "click->dialog#toggle" } }
+    .photo{ data: { action: "click->answers--dialog#toggle" } }
       %img{ src: "/images/cat-3.jpg", width: "125", height: "125" }
-    .photo{ data: { action: "click->dialog#toggle" } }
+    .photo{ data: { action: "click->answers--dialog#toggle" } }
       %img{ src: "/images/cat-4.jpg", width: "125", height: "125" }
-    .photo{ data: { action: "click->dialog#toggle" } }
+    .photo{ data: { action: "click->answers--dialog#toggle" } }
       %img{ src: "/images/cat-5.jpg", width: "125", height: "125" }
 
-  .dialog-background{ data: { target: "dialog.background", action: "click->dialog#toggle" }, "aria-disabled": "true" }
-    .dialog{ data: { target: "dialog.body" }, "aria-disabled": "true" }
+  .dialog-background{ data: { target: "answers--dialog.background", action: "click->answers--dialog#toggle" }, "aria-disabled": "true" }
+    .dialog{ data: { target: "answers--dialog.body" }, "aria-disabled": "true" }
       .dialog__title
         .dialog__title-main 追加先
-        .dialog__close-aciton{ data: { action: "click->dialog#toggle" } } X
+        .dialog__close-aciton{ data: { action: "click->answers--dialog#toggle" } } X
       .dialog__albums
         .dialog__album
           .dialog__album-thumbnail

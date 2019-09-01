@@ -1,5 +1,5 @@
 import { Controller } from "stimulus"
-import Github from "../lib/github"
+import Github from "../../lib/github"
 
 export default class extends Controller {
   static targets = [ "username", "user" ]

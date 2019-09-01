@@ -1,9 +1,9 @@
 %h1.lecture-title.-h1 github API を利用する
 
-%div{ data: { controller: "github" } }
+%div{ data: { controller: "answers--github" } }
   .github-form
-    %input{ type: "text", name: "username", data: { target: "github.username" } }
-    %button{ type: "button", data: { action: "click->github#getUser" } } 送信
+    %input{ type: "text", name: "username", data: { target: "answers--github.username" } }
+    %button{ type: "button", data: { action: "click->answers--github#getUser" } } 送信
 
   .github-async-result
-    %div{ data: { target: "github.user" } } 
+    %div{ data: { target: "answers--github.user" } } 
